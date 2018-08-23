@@ -33,6 +33,8 @@ else  if(searchFeild == 'רחוב'){ container1[x]= Street[x];}
 else  if(searchFeild == 'כתובת_מלאה'){ container1[x]= fullAdd[x];}
 else  if(searchFeild == 'משפחה'){ container1[x]= Family[x];}
 else  if(searchFeild == 'שם'){container1[x]= Name[x];}
+else  if(searchFeild == 'שם'){container1[x]= Id[x];}
+else  if(searchFeild == 'שם'){container1[x]= innerCircul[x];}    
 
 
  textSize(22);fill(217,179,16);
