@@ -237,7 +237,7 @@ console.log(err);
 search  = new dropDown("שדות",names,150,40,40,400,droplength,5,1);
  search1  = new dropDown("top",names,150,40,100,100,droplength,5,1);
 
- contacts = new tabels ("contacts");
+ //contacts = new tabels ("contacts");
 
 
 
