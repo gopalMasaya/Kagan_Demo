@@ -1,9 +1,4 @@
 
-// hosting url
-//https://kagandb-fa427.firebaseapp.com/
-
-//deploying command
-// C:\Users\gopal\AppData\Roaming\npm\firebase init
 
 //github
 //https://gopalmasaya.github.io/Kagan_Demo/
