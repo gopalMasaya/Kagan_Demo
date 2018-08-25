@@ -277,7 +277,7 @@ background(23,106,102);
  if(Password == false){
      textSize(18);
 
-      text("Demo version v1 password 1234",width/2,50);
+   //   text("Demo version v1 password 1234",width/2,50);
      rectMode(CENTER); fill(80,40,40);rect(width/2,height/2,300,150);
      fill(92,120,252,150);rect(width/2,height/2-55,300,40);
 
