@@ -237,7 +237,7 @@ console.log(err);
   volenteer =     new Input("התנדבות"     ,12,width - 830,330,200,25);
 
 
- search  = new dropDown("שדות",names,150,40,40,400,droplength,5,1);
+ search  = new dropDown("שדות",names,150,40,35,350,droplength,5,1);
  stass  = new dropDown("סטטוס",statuss_list,150,40,width-800,330,statuss_list.length,5,2);
 Gender  = new dropDown("מין",gen,150,40,width-400,390,gen.length,2,7);
 
