@@ -13,7 +13,11 @@ class Button {
     if(this.MouseIsOver()== true){  fill(0,38,71);strokeWeight(2);
     stroke(190,120,20);} else{fill(0,38,61);strokeWeight(1);stroke(217,179,16);}
 
-    rect(this.x,this.y,this.w,this.h,5);
+     noFill();
+    rect(this.x-1,this.y-1,this.w+1,this.h+1);
+     image(img,this.x,this.y,this.w,this.h);
+     
+     
     textSize(22);
     textAlign(CENTER, CENTER);
     if(this.MouseIsOver()== true){noStroke();fill(240,180,20);}
