@@ -216,10 +216,10 @@ console.log(err);
 
   save = new Button ("שמירה",width-205,502,190,40);
   update = new Button ("ניתוח",width-205,150,190,40);
-  down = new Button ("הקודם",40,330-ypos,150,40);
-  go = new Button ("חיפוש",40,150-ypos,150,40);
-  up = new Button ("הבא",40,270-ypos,150,40);
-  clear = new Button ("נקה",40,210-ypos,150,40);
+   down = new Button ("הקודם",30,230-ypos,70,60);
+  go = new Button ("חיפוש",120,150-ypos,70,60);
+  up = new Button ("הבא",120,230-ypos,70,60);
+  clear = new Button ("נקה",30,150-ypos,70,60);
   Sinput1 =  new Input("",6,30,90-ypos,170,30);
   Sinput    =  new Input("",10,30,40-ypos,170,30);
 
