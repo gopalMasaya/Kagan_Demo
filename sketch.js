@@ -111,7 +111,7 @@ var floating = 0;
 var helper = 0;
 var totalbzb =30136;
 var saving = false;
-var pass = "1234";var pass1 = "5678";var pass2 = "1357";
+var pass = "1235";var pass1 = "5678";var pass2 = "1357";
 var passMode = 0;limit1 = 0; limit2 = 0;
  var dis = "";
 var Password = false;
