@@ -112,9 +112,9 @@ var helper = 0;
 var totalbzb =30136;
 var saving = false;
 
-var pass = "be at your base 22";
-var pass1 = "look far 4";
-var pass2 = "winning by planing 2";
+var pass = "base 22";
+var pass1 = "look 43";
+var pass2 = "full open";
 
 var passMode = 0;limit1 = 0; limit2 = 0;
  var dis = "";
