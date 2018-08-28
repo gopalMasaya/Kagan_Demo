@@ -218,8 +218,8 @@ console.log(err);
   bzm = new Button ("Input data",120,1,120,25);
   rolldown = new Button ("D",232,382,40,80);
 
-  save = new Button ("שמירה",width-205,502,190,40);
-  update = new Button ("ניתוח",width-205,150,190,40);
+  save = new Button ("שמירה",width-205,502,70,40);
+  update = new Button ("ניתוח",width-115,502,70,40);
    down = new Button ("הקודם",30,230-ypos,70,60);
   go = new Button ("חיפוש",120,150-ypos,70,60);
   up = new Button ("הבא",120,230-ypos,70,60);
