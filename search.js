@@ -3,7 +3,7 @@ var found = false;
 function Search(){
 
 
-  var str = "radheShyam";
+ 
 
 
 if(keyIsDown(DOWN_ARROW) && roll < index){roll+=5;}
@@ -56,7 +56,7 @@ if(limit == 1){if(index> 10){ limit1 = index - 10;}else limit1 = 0;}
 else if(limit == 2){if(index> 50){limit1 = index - 50;}else limit1 = 0;}
 else if(limit == 3){limit1 = 0;}
 textAlign(RIGHT); textSize(24); fill(217,179,16);
-for(var i = 1; i< index- limit1; i++){
+for(var i = 1; i< index- limit1+1; i++){
 //  console.log(i+":   "+Results[i]);}
 
 text(i,width-20,155+(i*30)+(-roll*30));
