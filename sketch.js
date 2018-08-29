@@ -172,7 +172,7 @@ function gotData(data){
    keys = Object.keys(table1);
 //  console.log(keys);
 
-  for(var i = 0 ; i < keys.length;i++){
+  for(var i = 1 ; i < keys.length;i++){
   var s = 'raw';
     var k = keys[i];
     Id[k] = table1[k].תעודת_זהות;
