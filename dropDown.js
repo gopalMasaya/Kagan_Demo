@@ -1,7 +1,6 @@
+
+
 class dropDown{
-
-
-
 
   constructor( title, Label, x, y, locX, locY,  Cells, cellNo,  id){
 
@@ -16,12 +15,13 @@ class dropDown{
   this.numOfcells = cellNo;
    this.Id = id;
 
+
   }
 
   show(){
 //console.log("wheel  "+ ticks);
-this.signal();
 
+ this.signal();
 fill(90,20,20); stroke(255,150,40); textSize(20);
 
 if(this.mouseOver()){isOn = true;wheelPos = 0;loc = 0;}
@@ -30,7 +30,7 @@ if(this.mouseOver()){isOn = true;wheelPos = 0;loc = 0;}
 
   var ticks = this.cells - this.numOfcells;
 //console.log("wheel  "+ ticks);
-  for(var i = 0; i<= this.numOfcells; i++){
+  for(let i = 0; i<= this.numOfcells; i++){
      strokeWeight(1);stroke(217,179,16);
    if(loc == i){ fill(20);} else fill(128,0,0);
 
@@ -50,6 +50,9 @@ if(this.mouseOver()){isOn = true;wheelPos = 0;loc = 0;}
    text(this.label[j-wheelPos],this.xpos+(this.Width/2),(this.ypos+this.Height+(this.Height*0.65))+(j*this.Height));
    text(this.Title,this.xpos+(this.Width/2),this.ypos+(this.Height*0.5));
   }
+
+if( mouseIsPressed && mouseX > this.xpos +150){isOn = false;}
+
 }
 
 
@@ -60,25 +63,34 @@ else if(isOn  == false){
   text(this.Title,this.xpos+(this.Width/2),this.ypos+(this.Height*0.5));
 
 }
-if(loc > 0){this.Title = this.label[loc-wheelPos-1];}
+
 if(mouseIsPressed){
-  if(this.Id === 1 ){
+if(loc > 0){this.Title = this.label[loc-wheelPos-1];
+  if(this.Id ==1){
   if(this.Title != "חיפוש"){searchFeild = this.Title;} else searchFeild = "שם פרטי";
-  }
-if(this.Id === 2){  getStatuss =this.Title;}
-//if(this.Id === 3){  text("3",40,80);}
+isOn = false;
 }
 
+else if(this.Id ==2){
+if(this.Title != "סטטוס"){getStatuss = this.Title;}
+isOn = false;
+}}
+
+
+
+
+}
 
 }
 
    mouseOver(){
 
   if(mouseX > this.xpos && mouseX < this.xpos+this.Width && mouseY > this.ypos && mouseY < this.ypos+ this.Height){
-    if(mouseIsPressed){  isOn = true;return true;}
-  }else if(mouseIsPressed){isOn = false;}
 
-   return false;
+    if(mouseIsPressed){  isOn = true;return true;}
+  }else if(mouseIsPressed){return false;}
+
+
   }
 
 
