@@ -332,7 +332,9 @@ background(23,106,102);
 if(Password == true){
 fill(120,40,70);
 rect(401,0,width-231,60);
-//console.log(Password);
+textAlign(RIGHT);
+fill(217,179,16); if(Id[500] != "" ){text("...אפשר להתחיל", width-80,30);}
+
 
 
 if(page == 0){// searching
