@@ -140,6 +140,8 @@ for(var i = 0; i< 800; i++){
   keys[i]=[];
 }
 
+window.onbeforeunload = function() { return true };
+
 function centerCanvas() {
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
