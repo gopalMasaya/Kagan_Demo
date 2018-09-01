@@ -1,7 +1,12 @@
 
+// hosting url
+//https://kagandb-fa427.firebaseapp.com/
+
+//deploying command
+// C:\Users\gopal\AppData\Roaming\npm\firebase init
 
 //github
-//https://gopalmasaya.github.io/Kagan_Demo/
+//‏
 
 var button;
 var bg;
@@ -10,6 +15,9 @@ var table;
 var col;
 
 
+var loc1 = 0;
+var isOn1 =false;
+var loc = 0;
 var time;
 var searchFeild={} ;
 var searchFeild1 ;
@@ -20,6 +28,7 @@ var columCount = 0;
 var textPos = 0;
 var Wheel = 0;
 var wheelPos = 0;
+var wheelPos1 = 0;
 var Cells = 0;
 var supportnum = 0;
 
@@ -45,14 +54,14 @@ var count = 0;
  var bzbIndex = new Array (30);
  var messagelength = 0;
   var inputData = new Array(30);
-var limit = 0;
+ var limit = 0;
 
 
 var timepoint ={};
 var positionX = 0;
 var positionY = 0;
 
-var loc = 0;
+
 var droplength = 0;
 var index = 0;
 var rawnum = 0;
@@ -100,6 +109,8 @@ var stringer = new Array(20);
 var match = new Array(20);
 var last_p = new Array(800);
 
+
+var  searchFeild2 ="";
 var myFont1;
 var table1;
 var results;
@@ -111,11 +122,7 @@ var floating = 0;
 var helper = 0;
 var totalbzb =30136;
 var saving = false;
-
-var pass = "base 22";
-var pass1 = "look 43";
-var pass2 = "full open";
-
+var pass = "1234";var pass1 = "5678";var pass2 = "1357";
 var passMode = 0;limit1 = 0; limit2 = 0;
  var dis = "";
 var Password = false;
@@ -124,6 +131,10 @@ var graphData;
 var cnv;
 var getStatuss = "";
 var Dropid = 0;
+var dropdown;
+
+var SaveTable = false;
+
 
 for(var i = 0; i< 800; i++){
   keys[i]=[];
@@ -149,6 +160,17 @@ cnv =   createCanvas(windowWidth, windowHeight+10);
  centerCanvas();
  frameRate(90);
 
+ for(var i =0; i< 800;i++){
+
+    Family[i]="";Id[i]="";Street[i]="";Name[i]="";Kalfi[i]="";when[i] = "";
+    rawNum[i] = ""; Phone[i]="";voteTo[i]="";Name[i]="";toHelp[i]="";email[i]="";
+    Age[i] = ""; innerCircul[i] = "";transporting[i] = "";Gender[i] = "";actions[i] ="";
+    contactMen[i] = "";container1[i]="";statuss[i]="";raw[i]="";Results[i]=[];fullAdd[i]="";
+    container2[i]="";
+  }
+
+
+
 
  var config = {
  	 apiKey: "AIzaSyAGaGhkUODWYbyTlEaVmKbL2s9WGSZBvC8",
@@ -171,26 +193,31 @@ function gotData(data){
 //    console.log(table1);
    keys = Object.keys(table1);
 //  console.log(keys);
-
-  for(var i = 1 ; i < keys.length;i++){
+//console.log(keys.length);
+  for(let i = 1 ; i < keys.length-1;i++){
   var s = 'raw';
     var k = keys[i];
     Id[k] = table1[k].תעודת_זהות;
-    Family[k] = table1[k].משפחה;  Family[k] =  trim(Family[k]);
-    Name[k] = table1[k].שם;       Name[k]   =  trim(Name[k]);
-    Street[k] = table1[k].רחוב;   Street[k] =  trim(Street[k]);
+    Family[k] = table1[k].משפחה;
+    Name[k] = table1[k].שם;
+    Street[k] = table1[k].רחוב;
     fullAdd[k]= table1[k].כתובת_מלאה; //fullAdd[k]= trim(fullAdd[k]);
-    Kalfi[k] = table1[k].קלפי;   Kalfi[k] = Kalfi[k].toString(); Kalfi[k] =  trim(Kalfi[k]);
+    Kalfi[k] = table1[k].קלפי;
     raw[k] = table1[k].שורה;
     contactmen[k] = table1[k].איש_קשר;  //contactmen[k] =  trim(contactmen[k]);
     Gender[k] = table1[k].מין;
     Phone[k] = table1[k].סלולרי;
     email[k] = table1[k].אימייל;
-    statuss[k] = table1[k].סטטוס;   statuss[k] =  trim(statuss[k]);
+    statuss[k] = table1[k].סטטוס;
     when[k] = table1[k].תאריך;
     innerCircul[k] = table1[k].מעגל_שיוך;
 
   //  console.log(i +"  "+Name[i]);
+  Family[i] =  trim(Family[i]);
+  Name[k]   =  trim(Name[k]);
+  Street[k] =  trim(Street[k]);
+  Kalfi[k] = Kalfi[k].toString(); Kalfi[k] =  trim(Kalfi[k]);
+  statuss[k] =  trim(statuss[k]);
   }
 
 }
@@ -199,10 +226,10 @@ console.log(err);
 }
 
 
+//window.onbeforeunload = function() { return true }
 
 
-
- img = loadImage('data/Button.png');
+ img = loadImage('data/Button1.png');
  myFont1 = loadFont('data/Assistant-ExtraLight.ttf');
 
   droplength = names.length;
@@ -214,20 +241,26 @@ console.log(err);
  //textAlign(RIGHT);
 
  submit = new Button ("עדכן",550,height-120,120,30);
-  load = new Button ("load file",1,1,150,60);
-  bzm = new Button ("Input data",120,1,120,25);
+
+
   rolldown = new Button ("D",232,382,40,80);
 
-  save = new Button ("שמירה",width-205,502,70,40);
-  update = new Button ("ניתוח",width-115,502,70,40);
-   down = new Button ("הקודם",30,230-ypos,70,60);
+  save = new Button ("שמירה",width-198,502,185,40);
+  update = new Button ("ניתוח",width-198,150,185,40);
+  down = new Button ("הקודם",30,230-ypos,70,60);
+  clear = new Button ("נקה",30,150-ypos,70,60);
+  maps = new Button ( "מפות",30,310,70,60);
+  graphs = new Button ("גרפים",120,310,70,60);
+  reports = new Button ( "שמור כטקסט",30,390,160,60);
+  Tabels = new Button ("שמור כטבלה",30,470,160,60);
+
   go = new Button ("חיפוש",120,150-ypos,70,60);
   up = new Button ("הבא",120,230-ypos,70,60);
-  clear = new Button ("נקה",30,150-ypos,70,60);
-  Sinput1 =  new Input("",6,30,90-ypos,170,30);
-  Sinput    =  new Input("",10,30,40-ypos,170,30);
 
 
+
+  Sinput1 =  new Input("",10,30,90-ypos,170,30);
+  Sinput    =  new Input("",6,30,40-ypos,170,30);
  phone = new Input  ("טלפון:",1, width - 400,150,200,25);
  email = new Input  ("אימייל:",2,width - 400,210,200,25);
 // statuss = new Input("סטטוס:",3, width - 400,270,200,25);
@@ -239,24 +272,19 @@ console.log(err);
  needAride =   new Input("הסעה"     ,9,width - 830,270,200,25);
 // Actions =     new Input("פעולות המשך"     ,11,width - 400,450,200,25);
   volenteer =     new Input("התנדבות"     ,12,width - 830,330,200,25);
+  tableName =     new Input("",13,30,550,150,25);
 
 
- search  = new dropDown("שדות",names,150,40,35,310,droplength,5,1);
+ search  = new dropDown("1שדות",names,120,30,230,40,droplength,5,1);
  stass  = new dropDown("סטטוס",statuss_list,150,40,width-800,330,statuss_list.length,5,2);
-Gender  = new dropDown("מין",gen,150,40,width-400,390,gen.length,2,7);
+search2  = new dropDown1("2שדות",names,120,30,230,95,droplength,5);
 
 
  contacts = new tabels ("contacts");
 
 
 
- for(var i =0; i< 800;i++){
 
-    Family[i]="";Id[i]="";Street[i]="";Name[i]="";Kalfi[i]="";when[i] = "";
-    rawNum[i] = ""; Phone[i]="";voteTo[i]="";Name[i]="";toHelp[i]="";email[i]="";
-    Age[i] = ""; innerCircul[i] = "";transporting[i] = "";Gender[i] = "";actions[i] ="";
-    contactMen[i] = "";container1[i]="";statuss[i]="";raw[i]="";Results[i]=[];fullAdd[i]="";
-  }
 for (var i = 0; i < 30;i++){inputData[i]=""; bzbIndex[i]=""; }
 for (var i = 0; i < 27000;i++){Search[i]="";}
  for(var i =0; i< 20;i++){ message[i] ="";stringer[i]=""; }
@@ -264,19 +292,24 @@ for(var i =0; i< 4000;i++){ supporters[i] =""; }
 for (var i = 0; i < pro.length; i++){
    pro[i]=0;Time[i]="";Floating[i]=0;Against[i]= 0;}
 
+
+
+
 }
 
 
 
 function draw(){
+
 background(23,106,102);
  textFont('Assistant');
+
 
 
  if(Password == false){
      textSize(18);
 
-   //   text("Demo version v1 password 1234",width/2,50);
+//      text("Demo version v1 password 1234",width/2,50);
      rectMode(CENTER); fill(80,40,40);rect(width/2,height/2,300,150);
      fill(92,120,252,150);rect(width/2,height/2-55,300,40);
 
@@ -290,21 +323,14 @@ background(23,106,102);
 
 
 
- rectMode(CORNER);
-
- fill(20,90,110);
- rect(0,0,230,height);
 
 
+ rectMode(CORNER); fill(20,90,110); rect(0,0,400,height);
 
 if(Password == true){
 fill(120,40,70);
-rect(231,0,width-231,60);
-
-
-
-
-
+rect(401,0,width-231,60);
+//console.log(Password);
 
 
 if(page == 0){// searching
@@ -318,11 +344,14 @@ if(go.MouseIsOver()){
   // if buuton is pressed show result and collect data
   if(show == true){  Search();}
 }
-go.Draw();  Sinput.display();Sinput1.display();
-clear.Draw();
+go.Draw();  Sinput.display();Sinput1.display();tableName.display();
+clear.Draw();maps.Draw();graphs.Draw();
+reports.Draw();Tabels.Draw();
 textAlign(CENTER);
+search2.Show();
 search.show();
-
+fill(255);
+text("הכנס שם קובץ",100,590);
 }
 
 
@@ -406,16 +435,20 @@ if(keyCode == BACKSPACE){
 
 }
 
-
-
-
-
+function mySelectEvent() {
+   selected = this.selected();
+  if (selected === 'pear') {
+    console.log("it's a pear!");
+  }
+}
 
 function mousePressed(){
-
+if(Tabels.MouseIsOver()){SaveTable = true;}
   if(up.MouseIsOver()){page +=1;}
   if(down.MouseIsOver()){
   if(page == 1){ Results[roll] = 0;index = 0;}
+  if(page == 2){voteForUs = 0; floating = 0;}
+  if(page == 3){ centerCanvas();}
     page =0;}
 }
 
@@ -428,10 +461,13 @@ wheel = event.delta;
 if(mouseX < 230){ypos += event.delta;}
 if(roll > 0 && roll < index){
 roll += event.delta/100;}
-if(roll > index-1){roll = index-1;}
+if(roll > index){roll = index;}
 if(roll < 0){roll = 0;}
 
   //uncomment to block page scrolling
+  if(isOn1 == true){
+  wheelPos1 += (-event.delta/100);}
+
 if(isOn == true){
 wheelPos += (-event.delta/100);}
 }
