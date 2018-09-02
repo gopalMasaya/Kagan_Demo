@@ -142,11 +142,7 @@ for(var i = 0; i< 800; i++){
 
 window.onbeforeunload = function() { return true };
 
-function centerCanvas() {
-  var x = (windowWidth - width) / 2;
-  var y = (windowHeight - height) / 2;
-  cnv.position(0, 0);
-}
+
 
 function preload() {
   names = loadStrings('data/Columns.txt');
@@ -158,8 +154,8 @@ function preload() {
 
 
 function setup(){
-cnv =   createCanvas(windowWidth, windowHeight+10);
- centerCanvas();
+const canvasElt = createCanvas(displayWidth, displayHeight+10).elt;
+   canvasElt.style.width = '100%', canvasElt.style.height = '100%';
  frameRate(90);
 
  for(var i =0; i< 800;i++){
@@ -452,7 +448,11 @@ if(Tabels.MouseIsOver()){SaveTable = true;}
   if(down.MouseIsOver()){
   if(page == 1){ Results[roll] = 0;index = 0;}
   if(page == 2){voteForUs = 0; floating = 0;}
-  if(page == 3){ centerCanvas();}
+  if(page == 3){
+  const canvasElt = createCanvas(displayWidth, displayHeight+10).elt;
+   canvasElt.style.width = '100%', canvasElt.style.height = '100%';
+  
+  }
     page =0;}
 }
 
