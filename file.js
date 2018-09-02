@@ -26,7 +26,7 @@ class Input {
     strokeWeight(2);
    textSize(22);
    if(recive == true){
-     fill(150); stroke(200,120,60);
+     fill(180); stroke(200,120,60);
       rect(this.x, this.y, this.w, this.h, 5);}
 
     else  if(recive == false){
