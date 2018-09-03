@@ -122,7 +122,7 @@ var floating = 0;
 var helper = 0;
 var totalbzb =30136;
 var saving = false;
-var pass = "1234";var pass1 = "5678";var pass2 = "1357";
+var pass = "base 22"; var pass1 = "look 43"; var pass2 = "full open";
 var passMode = 0;limit1 = 0; limit2 = 0;
  var dis = "";
 var Password = false;
@@ -145,8 +145,8 @@ window.onbeforeunload = function() { return true };
 
 
 function preload() {
-  names = loadStrings('data/Columns.txt');
-  table = loadTable('data/bzb.csv', 'csv', 'header');
+  names = loadStrings('Kagan_Demo/data/Columns.txt');
+  table = loadTable('Kagan_Demo/data/bzb.csv', 'csv', 'header');
 
 }
 
