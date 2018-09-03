@@ -154,7 +154,7 @@ function preload() {
 
 
 function setup(){
-const canvasElt = createCanvas(displayWidth, displayHeight+10).elt;
+const canvasElt = createCanvas(window.screen.width, window.screen.height).elt;
    canvasElt.style.width = '100%', canvasElt.style.height = '100%';
  frameRate(90);
 
