@@ -145,8 +145,8 @@ window.onbeforeunload = function() { return true };
 
 
 function preload() {
-  names = loadStrings('Kagan_Demo/data/Columns.txt');
-  table = loadTable('Kagan_Demo/data/bzb.csv', 'csv', 'header');
+  names = loadStrings('data/Columns.txt');
+  table = loadTable('data/bzb.csv', 'csv', 'header');
 
 }
 
