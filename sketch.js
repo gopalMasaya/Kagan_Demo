@@ -243,8 +243,8 @@ console.log(err);
 
   rolldown = new Button ("D",232,382,40,80);
 
-  save = new Button ("שמירה",width-205,502,185,40);
-  update = new Button ("ניתוח",width-205,150,185,40);
+  save = new Button ("שמירה",width-202,502,185,40);
+  update = new Button ("ניתוח",width-202,150,185,40);
   down = new Button ("הקודם",30,230-ypos,70,60);
   clear = new Button ("נקה",30,150-ypos,70,60);
   maps = new Button ( "מפות",30,310,70,60);
