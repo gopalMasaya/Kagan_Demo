@@ -227,7 +227,7 @@ console.log(err);
 //window.onbeforeunload = function() { return true }
 
 
- img = loadImage('data/Button1.png');
+ img = loadImage('data/Button1.PNG');
  myFont1 = loadFont('data/Assistant-ExtraLight.ttf');
 
   droplength = names.length;
