@@ -154,7 +154,7 @@ function preload() {
 
 
 function setup(){
-const canvasElt = createCanvas(auto, displayHight).elt;
+const canvasElt = createCanvas(auto, auto).elt;
    canvasElt.style.width = '100%', canvasElt.style.height = '100%';
  frameRate(90);
 
