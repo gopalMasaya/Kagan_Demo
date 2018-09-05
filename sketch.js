@@ -323,7 +323,7 @@ background(23,106,102);
 
 
 
-text("V1", 480,30);
+text("V2", 480,30);
  rectMode(CORNER); fill(20,90,110); rect(0,0,400,height);
 
 if(Password == true){
