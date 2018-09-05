@@ -37,7 +37,7 @@ else  if(searchFeild == 'כתובת_מלאה'){ container1[x]= fullAdd[x];}
 else  if(searchFeild == 'משפחה'){ container1[x]= Family[x];}
 else  if(searchFeild == 'שם'){container1[x]= Name[x];}
 else  if(searchFeild == 'תעודת_זהות'){container1[x]= Id[x];}
-else  if(searchFeild == 'מעגל שיוך'){container1[x]= Id[x];}    
+else  if(searchFeild == 'מעגל שיוך'){container1[x]= innerCircul[x];}    
 
 
 if(message[10] != ""){
@@ -49,7 +49,7 @@ else  if(searchFeild2 == 'כתובת_מלאה'){ container2[x]= fullAdd[x];}
 else  if(searchFeild2 == 'משפחה'){ container2[x]= Family[x];}
 else  if(searchFeild2 == 'שם'){container2[x]= Name[x];}
 else  if(searchFeild2 == 'תעודת_זהות'){container2[x]= Id[x];}
-else  if(searchFeild == 'מעגל שיוך'){container1[x]= Id[x];}  
+else  if(searchFeild == 'מעגל שיוך'){container1[x]= innerCircul[x];}  
 
 }else container2[x]="";
 
