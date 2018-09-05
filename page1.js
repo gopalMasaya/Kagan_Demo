@@ -56,7 +56,7 @@ if(message[4].length > 0){ageRef.update({גיל: message[4]});inputData[6] = mes
 if(message[9].length > 0){ridRef.update({הסעה: message[9]});inputData[11] = message[9];}
 if(message[8].length > 0){contactRef.update({איש_קשר: message[8]});inputData[9] = message[8];}
 //dateRef.update({זמן: time});inputData[5] = time;
-if(message[7].length > 0){circulRef.update({מעגל_שיוך: message[7]});inputData[12] = message[7];}
+if(message[7].length > 0){circulRef.update({מעגל: message[7]});inputData[12] = message[7];}
 
 }
 }
