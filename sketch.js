@@ -438,23 +438,29 @@ if(keyCode == BACKSPACE){
 
 
 function mousePressed(){
+
 if(Tabels.MouseIsOver()){SaveTable = true;}
-  if(up.MouseIsOver()){page +=1;
-      if(page == 1){loc = 1;}}                                     
+  if(up.MouseIsOver()){
+page +=1;
+if(page == 1){
+  message[1]="";message[2]="";message[1]="";message[5]="";
+  message[4]="";message[9]="";message[8]="";message[7]="";
+  Results[roll] = 0;index = 0;loc = 1;wheelPos= 0;}
+
+}
   if(down.MouseIsOver()){
-  if(page == 1){ Results[roll] = 0;index = 0;
-     message[1]="";message[2]="";message[1]="";message[5]="";
-    message[4]="";message[9]="";message[8]="";message[7]="";            
-   }
+  if(page == 1){
+    message[1]="";message[2]="";message[1]="";message[5]="";
+    message[4]="";message[9]="";message[8]="";message[7]="";
+    Results[roll] = 0;index = 0;loc = 0;wheelPos= 0;}
+
   if(page == 2){voteForUs = 0; floating = 0;}
   if(page == 3){
-  const canvasElt = createCanvas(displayWidth, displayHeight+10).elt;
-   canvasElt.style.width = '100%', canvasElt.style.height = '100%';
-  
+    const canvasElt = createCanvas(displayWidth, displayHeight+10).elt;
+     canvasElt.style.width = '100%', canvasElt.style.height = '100%';
   }
     page =0;}
 }
-
 
 function mouseWheel(event) {
 
