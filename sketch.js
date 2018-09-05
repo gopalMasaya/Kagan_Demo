@@ -436,18 +436,15 @@ if(keyCode == BACKSPACE){
 
 }
 
-function mySelectEvent() {
-   selected = this.selected();
-  if (selected === 'pear') {
-    console.log("it's a pear!");
-  }
-}
 
 function mousePressed(){
 if(Tabels.MouseIsOver()){SaveTable = true;}
   if(up.MouseIsOver()){page +=1;}
   if(down.MouseIsOver()){
-  if(page == 1){ Results[roll] = 0;index = 0;}
+  if(page == 1){ Results[roll] = 0;index = 0;
+     message[1]="";message[2]="";message[1]="";message[5]="";
+    message[4]="";message[9]="";message[8]="";message[7]="";            
+   }
   if(page == 2){voteForUs = 0; floating = 0;}
   if(page == 3){
   const canvasElt = createCanvas(displayWidth, displayHeight+10).elt;
