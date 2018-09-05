@@ -151,7 +151,7 @@ inputData[12]= innerCircul[Results[roll]];
 inputData[13]= actions[Results[roll]];
 inputData[14]= email[Results[roll]];
 
-page = 1;
+loc = 1;page = 1;
 
  }}
 //text(raw[x],width-700,120+(x*30));
