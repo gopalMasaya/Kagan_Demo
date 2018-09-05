@@ -323,15 +323,15 @@ background(23,106,102);
 
 
 
-text("V2", 480,30);
- rectMode(CORNER); fill(20,90,110); rect(0,0,400,height);
+
 
 if(Password == true){
 fill(120,40,70);
 rect(401,0,width-231,60);
 textAlign(RIGHT);
 fill(217,179,16); if(Id[500] != "" ){text("...אפשר להתחיל", width-80,30);}
-
+text("V2", 480,30);
+ rectMode(CORNER); fill(20,90,110); rect(0,0,400,height);
 
 
 if(page == 0){// searching
@@ -439,7 +439,8 @@ if(keyCode == BACKSPACE){
 
 function mousePressed(){
 if(Tabels.MouseIsOver()){SaveTable = true;}
-  if(up.MouseIsOver()){page +=1;}
+  if(up.MouseIsOver()){page +=1;
+      if(page == 1){loc = 1;}                                     
   if(down.MouseIsOver()){
   if(page == 1){ Results[roll] = 0;index = 0;
      message[1]="";message[2]="";message[1]="";message[5]="";
