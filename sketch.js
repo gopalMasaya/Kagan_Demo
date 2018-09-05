@@ -440,7 +440,7 @@ if(keyCode == BACKSPACE){
 function mousePressed(){
 if(Tabels.MouseIsOver()){SaveTable = true;}
   if(up.MouseIsOver()){page +=1;
-      if(page == 1){loc = 1;}                                     
+      if(page == 1){loc = 1;}}                                     
   if(down.MouseIsOver()){
   if(page == 1){ Results[roll] = 0;index = 0;
      message[1]="";message[2]="";message[1]="";message[5]="";
