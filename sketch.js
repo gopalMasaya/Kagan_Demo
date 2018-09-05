@@ -208,7 +208,7 @@ function gotData(data){
     email[k] = table1[k].אימייל;
     statuss[k] = table1[k].סטטוס;
     when[k] = table1[k].תאריך;
-    innerCircul[k] = table1[k].מעגל_שיוך;
+    innerCircul[k] = table1[k].מעגל;
 
   //  console.log(i +"  "+Name[i]);
   Family[i] =  trim(Family[i]);
@@ -216,6 +216,7 @@ function gotData(data){
   Street[k] =  trim(Street[k]);
   Kalfi[k] = Kalfi[k].toString(); Kalfi[k] =  trim(Kalfi[k]);
   statuss[k] =  trim(statuss[k]);
+  innerCircul[k]= trim(innerCircul[k]);
   }
 
 }
