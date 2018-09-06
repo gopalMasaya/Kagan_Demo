@@ -64,23 +64,24 @@ else if(isOn  == false){
 
 }
 
-if(mouseIsPressed){
+
+if(mouseIsPressed && page == 0){
 if(loc > 0){this.Title = this.label[loc-wheelPos-1];
   if(this.Id ==1){
   if(this.Title != "חיפוש"){searchFeild = this.Title;} else searchFeild = "שם פרטי";
 isOn = false;
-}
+}}else loc = 0;}
 
-else if(this.Id ==2){
+
+if(mouseIsPressed && page ==1){
+if(loc > 0){this.Title = this.label[loc-wheelPos-1];
+ if(this.Id ==2){
 if(this.Title != "סטטוס"){getStatuss = this.Title;}
 isOn = false;
-}}
-
-
-
-
 }
-
+}
+}
+    
 }
 
    mouseOver(){
