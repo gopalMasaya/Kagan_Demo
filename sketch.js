@@ -479,5 +479,5 @@ if(roll < 0){roll = 0;}
   wheelPos1 += (-event.delta/100);}
 
 if(isOn == true){
-wheelPos += (-event.delta/100);}
+wheelPos += (-event.delta/100);console.log(wheelPos);}
 }
