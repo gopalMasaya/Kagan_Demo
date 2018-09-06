@@ -157,7 +157,7 @@ function preload() {
 function setup(){
 const canvasElt = createCanvas(displayWidth, displayHeight).elt;
    canvasElt.style.width = '100%', canvasElt.style.height = '100%';
- frameRate(90);
+ frameRate(40);
 
  for(var i =0; i< 800;i++){
 
