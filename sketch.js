@@ -480,4 +480,5 @@ if(roll < 0){roll = 0;}
 
 if(isOn == true){
 wheelPos += (-event.delta/100);console.log(wheelPos);}
+ if(wheelPos < 0){wheelPos = 0;}
 }
