@@ -327,6 +327,9 @@ background(23,106,102);
 
 
 if(Password == true){
+ 
+  up.Draw();
+ down.Draw();
 fill(120,40,70);
 rect(401,0,width-231,60);
 textAlign(RIGHT);
@@ -362,8 +365,7 @@ text("הכנס שם קובץ",100,590);
     if(page == 3){  page3();}
 }
 
- up.Draw();
- down.Draw();
+
 
 
 
