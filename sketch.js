@@ -330,8 +330,7 @@ background(23,106,102);
 
 if(Password == true){
  stroke(217,179,16);
-  up.Draw();
- down.Draw();
+ 
 fill(120,40,70);
 rect(401,0,width-231,60);
 textAlign(RIGHT);
@@ -361,6 +360,7 @@ if(go.MouseIsOver()){
 go.Draw();  Sinput.display();Sinput1.display();tableName.display();
 clear.Draw();maps.Draw();graphs.Draw();
 reports.Draw();Tabels.Draw();
+ 
 textAlign(CENTER);
 search2.Show();
 search.show();
@@ -375,8 +375,9 @@ text("הכנס שם קובץ",100,590);
 }
 
 
-
-
+textAlign(CENTER);
+ up.Draw();
+ down.Draw();
 
 
 
