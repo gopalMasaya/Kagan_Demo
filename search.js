@@ -20,7 +20,7 @@ if(clear.MouseIsOver()){if(mouseIsPressed){run = 0; index = 0;
   Results[roll] = 0;roll = 0;show = false;}
 
   for(var i = 0;i< 18;i++){
-    fill(65);noStoke();
+    fill(65);noStroke();
     rect(500,80+(i*60),width-500,30);
   }
  fill(10,10,10);
