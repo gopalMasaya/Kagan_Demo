@@ -56,7 +56,7 @@ var count = 0;
   var inputData = new Array(30);
  var limit = 0;
 
-
+var fileData ="";
 var timepoint ={};
 var positionX = 0;
 var positionY = 0;
