@@ -130,13 +130,13 @@ for(var i = 150;i< 550;i+=50){
 
 
     textAlign(CENTER);
-    fill(255);textSize(50);
+    fill(255);textSize(40);
      //text("גרף התקדמות ",width/2+80,40);
 
 
 
   // textFont(titleFont);
-   text("מספר תומכים", width/2+115,80);
+   text("מספר תומכים", width/2+105,80);
      fill(17,249,16); textSize(24);
    text("%"+nfc(precnt,2)+"  תמיכה",width-115,250);
       text("קולות צפים" +"  %"+nfc(Fprecent,2),width-110,300);
