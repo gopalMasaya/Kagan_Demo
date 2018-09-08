@@ -155,8 +155,10 @@ function preload() {
 
 
 function setup(){
-const canvasElt = createCanvas(displayWidth, displayHeight).elt;
-   canvasElt.style.width = '100%', canvasElt.style.height = '100%';
+const canvas = createCanvas(displayWidth, displayHeight);
+ 
+  canvas.drop(gotFile);
+ 
  frameRate(40);
 
  for(var i =0; i< 800;i++){
@@ -327,7 +329,7 @@ background(23,106,102);
 
 
 if(Password == true){
- 
+ stroke(217,179,16);
   up.Draw();
  down.Draw();
 fill(120,40,70);
@@ -339,6 +341,13 @@ text("V1", 480,30);
 
 
 if(page == 0){// searching
+ 
+   noFill();stroke(217,179,16); rect(230,150,150,60);
+if(fileData.length< 1){
+  textAlign(CENTER);stroke(255);textSize(20);
+  text("הכנס קובץ", 305,180);
+}else{  text(fileData,370,180);}
+ 
 
    countbzb = true;
  textSize(18); textAlign(RIGHT);
@@ -372,6 +381,16 @@ text("הכנס שם קובץ",100,590);
 
 
 }
+
+function gotFile(file) {
+textSize(30);
+
+fileData = file.name + "\n" +" קב"+ file.size/1000
+//  var img = createImg(file.data);
+//  img.size(100, 100);
+
+}
+
 
 function gradientLine(x1,  y1,  x2,  y2,  a, b) {
   var deltaX = x2-x1;
