@@ -155,7 +155,7 @@ function preload() {
 
 
 function setup(){
-const canvas = createCanvas(displayWidth, displayHeight);
+const canvas = createCanvas(displayWidth, displayHeight-50);
  
   canvas.drop(gotFile);
  
