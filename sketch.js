@@ -329,7 +329,7 @@ background(23,106,102);
 
 
 if(Password == true){
- stroke(217,179,16);
+
  
 fill(120,40,70);
 rect(401,0,width-231,60);
