@@ -375,7 +375,7 @@ text("הכנס שם קובץ",100,590);
 }
 
 
-textAlign(CENTER);
+ rectMode(CORNER);
  up.Draw();
  down.Draw();
 
