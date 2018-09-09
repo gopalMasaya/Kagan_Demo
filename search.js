@@ -23,7 +23,7 @@ if(clear.MouseIsOver()){if(mouseIsPressed){run = 0; index = 0;
     fill(65);noStroke();
     rect(500,80+(i*60),width-500,30);
   }
- fill(10,10,10);
+ fill(10,10,10);stroke(255);
  rect(500,140,width-500,30);
   //if(searchFeild == 'סטטוס'){  text(searchFeild,400,200);}
 
@@ -74,7 +74,7 @@ textAlign(RIGHT); textSize(24); fill(217,179,16);
 
 for(var i = 1; i< index- limit1+1; i++){
 //  console.log(i+":   "+Results[i]);}
- fill(217,179,16);
+ fill(217,179,16);noStroke();
 text(i,width-20,155+(i*30)+(-roll*30));
 text(Id[Results[i]],width-50,155+(i*30)+(-roll*30));
 text(Family[Results[i]],width-160,155+(i*30)+(-roll*30));
