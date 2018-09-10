@@ -493,7 +493,7 @@ wheel = event.delta;
 if(mouseX < 230){ypos += event.delta;}
 if(roll > 0 && roll < index){
 roll += event.delta/100;}
-if(roll > index){roll = index;}
+if(roll > index){roll = index-1;}
 if(roll < 0){roll = 0;}
 
   //uncomment to block page scrolling
