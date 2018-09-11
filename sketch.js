@@ -435,7 +435,7 @@ console.log(Password+"  "+limit);
   if (key == '\n' ) {  count = 0;recive = false;} else {
     // Otherwise, concatenate the String
     // Each character typed by the user is added to the end of the String variable.
-    if(count < 28 && key != UP_ARROW && key != DOWN_ARROW){
+    if(count < 50 && key != UP_ARROW && key != DOWN_ARROW){
        messagelength = message[mIndex].length;
      message[mIndex] =  message[mIndex] + key;
     count++;}
