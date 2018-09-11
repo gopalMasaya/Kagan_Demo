@@ -57,7 +57,9 @@ if(message[9].length > 0){ridRef.update({הסעה: message[9]});inputData[11] = 
 if(message[8].length > 0){contactRef.update({איש_קשר: message[8]});inputData[9] = message[8];}
 //dateRef.update({זמן: time});inputData[5] = time;
 if(message[7].length > 0){circulRef.update({מעגל: message[7]});inputData[12] = message[7];}
-
+message[1]="";message[2]="";message[4]="";message[5]="";
+message[12]="";message[9]="";message[8]="";message[7]="";
+count = 0;
 }
 }
 
