@@ -491,7 +491,7 @@ function mouseWheel(event) {
 wheel = event.delta;
 //console.log("wheel  "+ wheelPos);
 if(mouseX < 230){ypos += event.delta;}
-if(roll > 0 && roll < index){
+if(roll > 0 && roll < index && page == 0){
 roll += event.delta/100;}
 if(roll > index){roll = index-1;}
 if(roll < 0){roll = 0;}
