@@ -7,8 +7,8 @@ function Search(){
 //if(  Family[21365]=="רתם"){console.log("1");}
 fill(35);rect(500,140  ,width-500,30);
 
-if(keyIsDown(DOWN_ARROW) && roll < index){roll+=5;}
-if(keyIsDown(UP_ARROW) && roll > 1){roll-=5;}
+if(keyIsDown(DOWN_ARROW) && roll < index){roll+=1;}
+if(keyIsDown(UP_ARROW) && roll > 1){roll-=1;}
 if(keyIsDown(BACKSPACE) ){message[6]="";saved = false;message[13]="";}
 //console.log(newStr);
 
