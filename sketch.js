@@ -212,8 +212,10 @@ function gotData(data){
     statuss[k] = table1[k].סטטוס;
     when[k] = table1[k].תאריך;
     innerCircul[k] = table1[k].מעגל;
+     transporting[k]= table1[k].הסעה;
 
   //  console.log(i +"  "+Name[i]);
+  transporting[i] = trim(transporting[i]); 
   Family[i] =  trim(Family[i]);
   Name[k]   =  trim(Name[k]);
   Street[k] =  trim(Street[k]);
