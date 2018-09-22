@@ -127,7 +127,7 @@ var floating = 0;
 var helper = 0;
 var totalbzb =98;
 var saving = false;
-var pass = "1234";var pass1 = "5678";var pass2 = "1357";
+var pass = "base 22";var pass1 = "be center";var pass2 = "full open";
 var passMode = 0;limit1 = 0; limit2 = 0;
  var dis = "";
 var Password = false;
@@ -375,7 +375,8 @@ android_pass.remove();
   for(var b = 0; b< stri.length;b++){
  searching[b]  =  matchAll(stri[b], regexp);
 if( matchAll( regexp,stri[b])){
-text(b +" "+searching[b],450,120+(b*30));}
+//text(b +" "+searching[b],450,120+(b*30));
+}
 }
 
 fill(120,40,70);rect(401,0,width-231,60);
