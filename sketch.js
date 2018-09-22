@@ -136,6 +136,14 @@ var dropdown;
 
 var SaveTable = false;
 
+ var android_search;
+ var android_phone;
+ var android_stass;
+ var android_circuil;
+  var android_ride;
+ var android_contact;
+ var android_pass;
+
 
 for(var i = 0; i< 800; i++){
   keys[i]=[];
@@ -248,6 +256,9 @@ console.log(err);
 
 
   rolldown = new Button ("D",232,382,40,80);
+  android_send = new Button("עדכן",20,200,150,50);
+  android_Search = new Button("חיפוש",20,270,150,50);
+  android = new Button("אנדרואיד",width/2-20,height/1.8,80,60);
 
   save = new Button ("שמירה",width-202,502,185,40);
   update = new Button ("ניתוח",width-202,150,185,40);
@@ -297,6 +308,14 @@ for (var i = 0; i < pro.length; i++){
    pro[i]=0;Time[i]="";Floating[i]=0;Against[i]= 0;}
 
 
+android_pass = createInput('סיסמא');
+android_pass.size(120,62);
+android_pass.style('background-color', color(90,90,110));
+android_pass.style('color', color(217,179,16));
+android_pass.style('font-size','30px');
+android_pass.style('border-color', color(217,179,16));
+android_pass.position(width/2+60,height/1.8-2);
+android_pass.input(myInput);
 
 
 }
@@ -312,7 +331,11 @@ background(23,106,102);
 
  if(Password == false){
      textSize(18);
-
+     android.Draw();
+     if(android.MouseIsOver() && mouseIsPressed && android_pass.value() == 'get in' ){
+       page = 4;console.log(4);Password= true;}
+  
+  
 //      text("Demo version v1 password 1234",width/2,50);
      rectMode(CENTER); fill(80,40,40);rect(width/2,height/2,300,150);
      fill(92,120,252,150);rect(width/2,height/2-55,300,40);
@@ -371,9 +394,10 @@ text("הכנס שם קובץ",100,590);
 }
 
 
-  if(page == 1){  page1();}//saving to data base}
+    if(page == 1){  page1();}//saving to data base}
     if(page == 2){  page2();}// graphs}
     if(page == 3){  page3();}
+    if(page == 4){  page4();}
 }
 
 
@@ -463,7 +487,7 @@ if(keyCode == BACKSPACE){
 
 
 function mousePressed(){
-
+if(android_send.MouseIsOver()){Asending = true;}
 if(Tabels.MouseIsOver()){SaveTable = true;}
   if(up.MouseIsOver()){
 page +=1;
