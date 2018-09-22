@@ -355,7 +355,7 @@ background(23,106,102);
 
 if(Password == true){
 
- 
+android_pass.remove(); 
 fill(120,40,70);
 rect(401,0,width-231,60);
 textAlign(RIGHT);
