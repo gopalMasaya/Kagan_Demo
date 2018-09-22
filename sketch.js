@@ -369,7 +369,7 @@ background(23,106,102);
  rectMode(CORNER); fill(20,90,110); rect(0,0,width/3.4,height);
 
 if(Password == true){
-
+android_pass.remove();
   var stri= ["hello golan","go","gollo","dello","car"];
   var regexp = "gol";
   for(var b = 0; b< stri.length;b++){
