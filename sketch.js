@@ -125,7 +125,7 @@ var voteForUs = 0;
 var oppose = 0;
 var floating = 0;
 var helper = 0;
-var totalbzb =98;
+var totalbzb =30160;
 var saving = false;
 var pass = "base 22";var pass1 = "be center";var pass2 = "full open";
 var passMode = 0;limit1 = 0; limit2 = 0;
