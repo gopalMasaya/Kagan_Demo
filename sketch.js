@@ -258,7 +258,7 @@ console.log(err);
   rolldown = new Button ("D",232,382,40,80);
   android_send = new Button("עדכן",20,200,150,50);
   android_Search = new Button("חיפוש",20,270,150,50);
-  android = new Button("אנדרואיד",width/2-20,height/1.8,80,60);
+  android = new Button("אנדרואיד",width/2-20,height/1.5,80,60);
 
   save = new Button ("שמירה",width-202,502,185,40);
   update = new Button ("ניתוח",width-202,150,185,40);
@@ -314,7 +314,7 @@ android_pass.style('background-color', color(90,90,110));
 android_pass.style('color', color(217,179,16));
 android_pass.style('font-size','30px');
 android_pass.style('border-color', color(217,179,16));
-android_pass.position(width/2+60,height/1.8-2);
+android_pass.position(width/2+60,height/1.5-2);
 android_pass.input(myInput);
 
 
