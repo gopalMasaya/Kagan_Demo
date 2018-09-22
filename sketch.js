@@ -286,7 +286,7 @@ console.log(err);
   rolldown = new Button ("D",232,382,40,80);
 
   android_send = new Button("עדכן",20,200,150,50);
-  android_Search = new Button("חיפוש",20,270,150,50);
+  android_Search = new Button("חיפוש",200,200,150,50);
   save = new Button ("שמירה",width-198,502,185,40);
   update = new Button ("ניתוח",width-198,150,185,40);
   down = new Button ("הקודם",30,230-ypos,70,60);
