@@ -53,7 +53,7 @@ text("צפים:   "+floating+"  קולות", width-110,400);
      time = day()+"/"+month();
     // timepoint = append(timepoint,time);
 var database = firebase.database();
-var ref = database.ref('supportGraph');
+var ref1 = database.ref('supportGraph');
 var data ={
   time : time,
   support: voteForUs,
@@ -65,10 +65,10 @@ var data ={
   if(save.MouseIsOver()){if(mouseIsPressed){
     if(saving == false){
      text("נתוני זמן אמת נשמרו", width - 150,230);
-     ref.push(data);saving = true; getData = false;}}}
+     ref1.push(data);saving = true; getData = false;}}}
 
 
-ref.on('value',Input,err);
+ref1.on('value',Input,err);
 
  function Input(data){
    if (getData == false){
