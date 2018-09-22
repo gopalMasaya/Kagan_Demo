@@ -221,7 +221,7 @@ console.log(firebase);
 
 
 var database = firebase.database();
-var ref = database.ref('test1');
+var ref = database.ref('kaganDB');
 console.log(firebase);
 ref.on('value',gotData,errData);
 
@@ -456,7 +456,7 @@ function  keyTyped() {
 
       textSize(22);
 
-    if(keyCode != ENTER && recive == false && mouseX< 400){
+    if(keyCode != ENTER && recive == false && mouseY< 400){
     In = In + key;}
     if (keyCode == ENTER ) {
     if(In == pass  ){Password = true;limit = 1;}
