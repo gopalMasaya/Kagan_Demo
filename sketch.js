@@ -22,6 +22,7 @@ var searchFeild={} ;
 var searchFeild1 ;
 var message = new Array(20)  ;
 
+
 var num = 0;
 var columCount = 0;
 var textPos = 0;
@@ -142,7 +143,7 @@ var realTime_data = false;//page3
 var ypos1 = 0;//page3
 var votingDay="";//page3
 var votingKeys="";//page3
-
+var lastYpos1 = 0;
 
 
 
