@@ -315,7 +315,8 @@ console.log(err);
  //textAlign(RIGHT);
 
  submit = new Button ("עדכן",550,height-160,120,30);
-  rolldown = new Button ("D",232,382,40,80);
+ realTime = new Button ("זמן אמת",30,120,70,60);
+
 
   android_send = new Button("עדכן",20,200,150,50);
   android_Search = new Button("חיפוש",200,200,150,50);
@@ -541,6 +542,11 @@ if(keyCode == BACKSPACE){
 
 function mousePressed(){
 
+ if(realTime.MouseIsOver()){
+    for(let y = 0; y< votingCount.length;y++){
+  votingCount[y]= 0;}
+    realTime_data= true;}
+ 
 if(android_send.MouseIsOver()){Asending = true;}
 
 if(Tabels.MouseIsOver()){SaveTable = true;}
@@ -578,6 +584,11 @@ roll += event.delta/100;}
 if(roll > index){roll = index-1;}
 if(roll < 0){roll = 0;}
 }
+ 
+ if(mouseX > 500 && page == 3){
+ypos1 += event.delta/100;}
+if(ypos1 < 0){ypos1 = 0;}
+ 
   //uncomment to block page scrolling
   if(isOn1 == true){
   wheelPos1 += (-event.delta/100);}
