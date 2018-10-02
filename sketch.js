@@ -148,6 +148,19 @@ var dataIn = false;
 
 
 
+var bzbcount = new Array(50);
+for(let g= 0; g< bzbcount.length;g++){
+  bzbcount[g] = 0;
+
+}
+
+
+var searching = new Array(5);
+for(let x = 0; x< searching.length; x++){
+  searching[x]= "";
+}
+
+
 var  searchFeild2 ="";
 var myFont1;
 var table1;
