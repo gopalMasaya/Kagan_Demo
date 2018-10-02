@@ -144,7 +144,7 @@ var ypos1 = 0;//page3
 var votingDay="";//page3
 var votingKeys="";//page3
 var lastYpos1 = 0;
-
+var dataIn = false;
 
 
 
