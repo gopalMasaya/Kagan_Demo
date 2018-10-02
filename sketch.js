@@ -155,11 +155,6 @@ for(let g= 0; g< bzbcount.length;g++){
 }
 
 
-var searching = new Array(5);
-for(let x = 0; x< searching.length; x++){
-  searching[x]= "";
-}
-
 
 var  searchFeild2 ="";
 var myFont1;
@@ -474,7 +469,9 @@ text("הכנס שם קובץ",100,590);
   if(page == 4){  page4();}
 }
 textAlign(CENTER,CENTER);
-
+ 
+if(maps.MouseIsOver()){
+  if(mouseIsPressed){page = 3;}}
 
 }
 
